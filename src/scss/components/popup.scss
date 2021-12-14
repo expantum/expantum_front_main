@@ -56,7 +56,7 @@
 
 .registration-popup {
     width: 300px;
-    height: 146px;
+    height: 168px;
 
     .popup__wrap {
         position: absolute;
@@ -94,10 +94,10 @@
         }
 
         @include media('>=desktop') {
-            padding-top: 22%;
+            padding-top: 26%;
 
             .email-input {
-                margin-bottom: 100px;
+                margin-bottom: 120px;
             }
 
             .btn {
@@ -111,7 +111,7 @@
     }
     @include media('>=desktop') {
         width: 1000px;
-        height: 496px;
+        height: 560px;
     }
 }
 
