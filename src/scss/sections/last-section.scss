@@ -1,0 +1,159 @@
+.last-section {
+  margin-top: -12rem;
+  position: relative;
+
+
+  @include media(">=desktop") {
+    margin: 0;
+    padding: 35rem 0 22rem;
+  }
+
+  .top-wrap {
+    padding: 26rem 0 57rem;
+    position: relative;
+
+    @include media(">=desktop") {
+      position: static;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  .main-title {
+    font-size: 10.7rem;
+    text-align: center;
+
+    @include media(">=desktop") {
+      font-size: 15rem;
+      margin-bottom: 26rem;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 10rem;
+
+    @include media(">=desktop") {
+      margin-bottom: 4rem;
+      text-align: left;
+      font-size: 3.7rem;
+    }
+  }
+
+  .about-top {
+    width: 11rem;
+    margin-bottom: 3.7rem;
+
+    @include media(">=desktop") {
+      width: 15rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .last-red {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+
+    @include media(">=desktop") {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .last-warrior,
+  .last-bg {
+    position: absolute;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .last-warrior {
+    z-index: 3;
+  }
+
+  .last-subtitle {
+    text-transform: uppercase;
+    font-family: 'Romely Med';
+    color: $white;
+    font-size: 1.4rem;
+    letter-spacing: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+
+    @include media(">=desktop") {
+      font-size: 2rem;
+      letter-spacing: 1.6rem;
+    }
+  }
+
+  .bottom-wrap {
+    padding: 9.5rem 0 18rem;
+    position: relative;
+    z-index: 5;
+
+    @include media(">=desktop") {
+      padding: 0;
+    }
+
+    .title-wrap {
+      @include media(">=desktop") {
+        align-items: flex-start;
+      }
+
+      &.terms-title {
+        @include media(">=desktop") {
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-bottom: 12rem;
+
+    @include media(">=desktop") {
+      margin-bottom: 19rem;
+    }
+  }
+
+  .copyright {
+    font-size: 2.8rem;
+    line-height: 1;
+    margin-bottom: 4.5rem;
+    color: #787878;
+    text-align: center;
+
+    @include media(">=desktop") {
+      margin-bottom: 0;
+    }
+  }
+
+  .terms {
+    font-size: 2.8rem;
+    color: #c48e56;
+    text-decoration: underline;
+    text-align: center;
+  }
+}

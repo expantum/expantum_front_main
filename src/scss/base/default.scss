@@ -1,0 +1,86 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 4.16667px;
+  @include media(">=375px") {
+    font-size: 4.88281px;
+  }
+  @include media(">=414px") {
+    font-size: 5.39062px;
+  }
+  @include media(">=425px") {
+    font-size: 5.53385px;
+  }
+  @include media(">=768px") {
+    font-size: 10px;
+  }
+  @include media(">=1024px") {
+    font-size: 4.55111px;
+  }
+  @include media(">=1280px") {
+    font-size: 5.68889px;
+  }
+  @include media(">=1360px") {
+    font-size: 6px;
+  }
+  @include media(">=1440px") {
+    font-size: 6.4px;
+  }
+  @include media(">=1920px") {
+    font-size: 8.53333px;
+  }
+  @include media(">=2250px") {
+    font-size: 10px;
+  }
+  @include media(">=2560px") {
+    font-size: 11.3778px;
+  }
+  @include media(">=3840px") {
+    font-size: 17.0667px;
+  }
+}
+
+body {
+  @include font-smoothing(on);
+  font-family: $primary-font;
+  min-width: 320px;
+  background-color: $black;
+  height: 100vh;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 163rem;
+  padding: 0 4.5rem;
+  margin: 0 auto;
+}
+
+// Scroll
+.scroll-wrap::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ccc;
+}
+
+.scroll-wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+// Media
+// @include media(">=desktop") {
+
+// }

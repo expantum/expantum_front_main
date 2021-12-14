@@ -1,0 +1,251 @@
+.gameplay-section {
+  padding: 25rem 0 0;
+  position: relative;
+
+  .steel-img {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-37%);
+    width: 82.6rem;
+
+    @include media(">=desktop") {
+      top: -4%;
+      transform: translateX(-30%);
+      width: 64.7rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .title-wrap {
+    margin-bottom: 8rem;
+
+    .game-title {
+      margin-bottom: 7.4rem;
+    }
+
+    .section-title {
+      margin-bottom: 7rem;
+      font-size: 7.2rem;
+
+      @include media(">=desktop") {
+        font-size: 10rem;
+      }
+    }
+
+    .base-text {
+      width: 32rem;
+      text-align: center;
+    }
+  }
+
+  .gameSwiper {
+    width: 120rem;
+    height: 76rem;
+    border-radius: 5rem;
+    margin: 0 auto 5.5rem;
+    overflow: hidden;
+    flex: none;
+
+    @include media(">=desktop") {
+      margin: 0 auto 4rem;
+      height: 62rem;
+      border-radius: 10rem;
+    }
+  }
+
+  .swiper-img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      border-radius: 5rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      @include media(">=desktop") {
+        border-radius: 10rem;
+      }
+    }
+  }
+
+  .swiper-text {
+    display: block;
+    text-align: center;
+    font-size: 3.4rem;
+    color: $white;
+  }
+
+  .swiper-pagination {
+    position: static;
+    transform: none;
+    margin: 5rem auto 14.5rem;
+
+    @include media(">=desktop") {
+      margin: 5rem auto 20rem;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: rotate(45deg);
+    background-color: #f8edc9;
+    opacity: 0.3;
+    margin: 0 1.1rem;
+    border-radius: 0;
+
+    &-active {
+      position: relative;
+      opacity: 1;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        content: "";
+        width: 12rem;
+        height: 12rem;
+        background-image: url("../images/point.webp");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5.7rem;
+    height: 2.2rem;
+    background-image: url("../images/arrow.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    right: -25rem;
+
+    @include media(">=desktop") {
+      display: block;
+    }
+    @include media(">=1920px") {
+      right: -15rem;
+    }
+
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -25rem;
+    transform: rotate(180deg) translateY(-50%);
+
+    @include media(">=1920px") {
+      left: -15rem;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 5.7rem;
+  height: 2.2rem;
+  background-image: url("../images/arrow.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+
+  @include media(">=desktop") {
+    display: block;
+  }
+  @include media(">=1920px") {
+    right: -15rem;
+  }
+
+  &:after,
+  &:before {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  left: -25rem;
+  transform: translateY(-50%) rotate(180deg);
+
+  @include media(">=1920px") {
+    left: -15rem;
+  }
+}
+
+.game-bottom {
+  .section-title {
+    max-width: 100rem;
+    text-align: left;
+    margin-bottom: 9.5rem;
+    font-size: 6rem;
+
+    @include media(">=desktop") {
+      font-size: 10rem;
+      margin-bottom: 7rem;
+    }
+  }
+
+  .game-text {
+    color: $white;
+    font-size: 2.9rem;
+    max-width: 45rem;
+  }
+}
+
+.swiper-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 0.3rem;
+    background-color: #b57240;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -0.2rem;
+    z-index: 2;
+    border-radius: 10rem;
+  }
+
+  .swiper-top {
+    position: absolute;
+    top: -3.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60.6rem;
+    height: 10.3rem;
+    z-index: 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

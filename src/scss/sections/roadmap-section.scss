@@ -1,0 +1,113 @@
+.roadmap-section {
+    padding: 10rem 0 5rem;
+
+    .title-wrap {
+        margin-bottom: 10rem;
+        position: relative;
+        .section-title {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .swiper-button-next {
+        right: 0;
+        top: 50%;
+        transform: translateY(50%);
+    }
+    .swiper-button-prev {
+        left: 0;
+        top: 50%;
+        transform: translateY(50%) rotate(180deg);
+    }
+
+    .base-text {
+        text-align: center;
+    }
+}
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 5rem;
+
+    &__title {
+        line-height: 1;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, rgb(126, 76, 32), rgb(248, 237, 201) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__desc {
+        color: #625e59;
+        font-size: 2.3rem;
+        font-weight: 600;
+    }
+
+    &__subtitle {
+        font-size: 2.6rem;
+        color: $white;
+        margin-bottom: 3rem;
+        min-height: 9rem;
+        @include media(">=desktop") {
+            max-width: 60%;
+            min-height: 6rem;
+        }
+    }
+
+    &__bar {
+        display: block;
+        width: calc(100% + 5rem);
+        height: 0.5rem;
+        background-color: #998d78;
+        position: relative;
+        margin-bottom: 5rem;
+    }
+
+    &__square {
+        width: 1.7rem;
+        height: 1.7rem;
+        background-color: #998d78;
+        transform: rotate(45deg) translateY(-75%);
+        position: absolute;
+        left: -1.5rem;
+        top: 50%;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -51%) rotate(45deg);
+            content: "";
+            width: 12rem;
+            height: 12rem;
+            background-image: url("../images/point.webp");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            display: none;
+        }
+    }
+}
+
+.mapSwiper {
+    width: 100%;
+
+    .swiper-slide {
+        &.active {
+            .roadmap__bar {
+                background-color: red !important;
+            }
+
+            .roadmap__square {
+                &:before {
+                    display: block;
+                }
+            }
+        }
+    }
+}
