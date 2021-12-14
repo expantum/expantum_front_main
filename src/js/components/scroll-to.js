@@ -7,49 +7,45 @@ const CLASS_OVERFLOW = 'overflow';
 const CLASS_ACTIVE = 'active';
 
 const scrollTo = (() => {
+    const top = (id) => {
+        const scrollTarget = document.getElementById(id);
 
-  const initScroll = () => {
+        if (!scrollTarget) return;
 
-    if (!NAV_LINKS.length) return;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
 
-    NAV_LINKS.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
+        window.scrollBy({
+            top: elementPosition,
+            behavior: 'smooth',
+        });
+    };
 
-        const href = e.currentTarget.getAttribute('href').substring(1);
+    const initScroll = () => {
+        if (!NAV_LINKS.length) return;
 
+        NAV_LINKS.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
 
-        BURGER.classList.remove(CLASS_ACTIVE);
-        NAV.classList.remove(CLASS_ACTIVE);
-        BODY.classList.remove(CLASS_OVERFLOW);
+                const href = e.currentTarget.getAttribute('href').substring(1);
 
-        top(href);
-      })
-    });
-  };
+                BURGER.classList.remove(CLASS_ACTIVE);
+                NAV.classList.remove(CLASS_ACTIVE);
+                BODY.classList.remove(CLASS_OVERFLOW);
 
-  const top = (id) => {
-    const scrollTarget = document.getElementById(id);
+                top(href);
+            });
+        });
+    };
 
-    if (!scrollTarget) return;
+    const init = () => {
+        initScroll();
+    };
 
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition;
-
-    window.scrollBy({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  };
-
-  const init = () => {
-    initScroll();
-  };
-
-  return {
-    init,
-    top
-  };
+    return {
+        init,
+        top,
+    };
 })();
 
 export default scrollTo;
