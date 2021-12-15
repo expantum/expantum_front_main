@@ -3,14 +3,23 @@
     <div class="popup__wrap">
         <img class="wings-img" src="/assets/images/modal_register_wings.webp" />
     </div>
-    <div class="popup__content">
-        <form action="#">
-            <div class="btn primary_no-arrow email-input">
-                <input class="btn-text" type="email" placeholder="Your email" />
+    <div id="registration-form" class="popup__content">
+        <form class="form">
+            <div class="form__group email-input-group">
+                <div class="btn primary_no-arrow">
+                    <input class="btn-text" type="email" name="email" placeholder="Your email" />
+                </div>
+                <div class="form__error-text"></div>
             </div>
-            <button type="button" class="btn primary_no-arrow">
+            <button type="submit" class="btn primary_no-arrow">
                 <span>Subscribe</span>
             </button>
         </form>
+
+        <div class="success-message">
+            Congratulations, we have accepted your registration.
+            <br />
+            We will keep you updated with the latest news.
+        </div>
     </div>
 </div>

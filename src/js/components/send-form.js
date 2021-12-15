@@ -4,30 +4,10 @@ const constraints = {
         presence: true,
         email: true,
     },
-    subject: {
-        presence: true,
-        length: {
-            minimum: 3,
-            maximum: 20,
-        },
-        format: {
-            pattern: '[a-z 0-9]+',
-            flags: 'i',
-            message: 'can only contain a-z and 0-9',
-        },
-    },
-
-    message: {
-        presence: true,
-        // format: {
-        //   pattern: '[a-z0-9]+',
-        //   flags: 'i',
-        //   message: 'can only contain a-z and 0-9',
-        // },
-    },
 };
 
-const FORM = document.getElementById('form-contact');
+const CONTAINER = document.getElementById('registration-form');
+const FORM = CONTAINER.querySelector('form');
 const FORM_GROUP = 'form__group';
 const MESSAGE = '.form__error-text';
 
@@ -81,22 +61,25 @@ const sendForm = (() => {
     const sendData = (data) => {
         $.ajax({
             type: 'POST',
-            url: '../sendForm.php',
+            url: 'http://crm.app.test/run/registration.php',
+            // url: '/assets/registration.php',
             data, // serializes the form's elements.
             dataType: 'json',
             encode: true,
         }).done((response) => {
             if (response.success) {
-                popups.hidePopup();
-                popups.showPopup('success-popup');
+                CONTAINER.classList.add('success')
+            } else {
+                alert('Error while submiting!');
             }
         });
     };
 
     const validationForm = () => {
         if (FORM !== null) {
-            FORM.addEventListener('submit', function sub(ev) {
+            FORM.addEventListener('submit', function (ev) {
                 ev.preventDefault();
+                CONTAINER.classList.remove('success');
                 const values = validate.collectFormValues(this);
                 const errors = validate(values, constraints);
                 if (errors) {
