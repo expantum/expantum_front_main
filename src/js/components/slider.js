@@ -11,8 +11,7 @@ function initSwiper() {
             nextEl: gameSwiperContainer.querySelector('.swiper-button-next'),
             prevEl: gameSwiperContainer.querySelector('.swiper-button-prev'),
         },
-        pagination: false,
-        pagination_: {
+        pagination: {
             el: gameSwiperContainer.querySelector('.swiper-pagination'),
             clickable: true,
         },
