@@ -61,8 +61,7 @@ const sendForm = (() => {
     const sendData = (data) => {
         $.ajax({
             type: 'POST',
-            url: 'http://crm.app.test/run/registration.php',
-            // url: '/assets/registration.php',
+            url: '/assets/registration.php',
             data, // serializes the form's elements.
             dataType: 'json',
             encode: true,
