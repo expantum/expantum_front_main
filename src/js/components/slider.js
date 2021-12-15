@@ -1,23 +1,26 @@
 // import { Swiper } from 'swiper';
 
 function initSwiper() {
+    const gameSwiperContainer = document.querySelector('#gameSwiperContainer');
     // eslint-disable-next-line no-undef
-    const swiper = new Swiper('.gameSwiper', {
+    const gameSwiper = new Swiper(gameSwiperContainer.querySelector('.gameSwiper'), {
         slidesPerView: 1,
         loop: true,
 
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: gameSwiperContainer.querySelector('.swiper-button-next'),
+            prevEl: gameSwiperContainer.querySelector('.swiper-button-prev'),
         },
-        pagination: {
-            el: '.swiper-pagination',
+        pagination: false,
+        pagination_: {
+            el: gameSwiperContainer.querySelector('.swiper-pagination'),
             clickable: true,
         },
     });
 
+    const roadMapSwiperContainer = document.querySelector('#roadmapSwiperContainer');
     // eslint-disable-next-line no-undef
-    const swiper2 = new Swiper('.mapSwiper', {
+    const roadMapSwiper = new Swiper(roadMapSwiperContainer.querySelector('.mapSwiper'), {
         slideToClickedSlide: true,
         initialSlide: 0,
         slidesPerView: 3.5,
@@ -32,8 +35,8 @@ function initSwiper() {
         },
 
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: roadMapSwiperContainer.querySelector('.swiper-button-next'),
+            prevEl: roadMapSwiperContainer.querySelector('.swiper-button-prev'),
         },
     });
 
@@ -51,9 +54,9 @@ function initSwiper() {
     // swiper2.width = 3000;
 
     // eslint-disable-next-line
-    if (!swiper) return;
+    if (!gameSwiper) return;
     // eslint-disable-next-line
-    if (!swiper2) return;
+    if (!roadMapSwiper) return;
 }
 
 export default initSwiper;
