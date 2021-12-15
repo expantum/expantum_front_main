@@ -91,7 +91,9 @@
         }
 
         .email-input-group {
-            transform: scale(0.56);
+            .btn {
+                transform: scale(0.56);
+            }
         }
 
         .form {
@@ -150,7 +152,9 @@
             }
 
             .email-input-group {
-                transform: scale(2);
+                .btn {
+                    transform: scale(2);
+                }
             }
 
             .success-message {
