@@ -1,15 +1,12 @@
 {
-    "name": "web-starter-jc",
-    "version": "2.5.0",
-    "description": "Starter kit for markup projects",
-    "keywords": [
-        "starter",
-        "markup",
-        "Ristars",
-        "jc"
-    ],
-    "author": "Ristars",
+    "name": "expantum-mail",
+    "version": "0.1.0",
     "license": "MIT",
+    "scripts": {
+        "test": "gulp build",
+        "production": "gulp build",
+        "start": "gulp"
+    },
     "devDependencies": {
         "@babel/core": "^7.7.2",
         "@babel/preset-env": "^7.7.1",
@@ -52,14 +49,11 @@
     "engines": {
         "node": ">=8.0.0"
     },
-    "scripts": {
-        "test": "gulp build",
-        "production": "gulp build",
-        "start": "gulp"
-    },
     "dependencies": {
         "aos": "^2.3.4",
         "choices.js": "^9.0.1",
+        "countdown-js": "^1.0.2",
+        "dayjs": "^1.10.7",
         "include-media": "^1.4.9",
         "inputmask": "^5.0.6",
         "jquery": "^3.4.1",

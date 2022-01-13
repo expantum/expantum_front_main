@@ -1,179 +1,383 @@
 .main-section {
-  padding: 0 0 20rem;
-  position: relative;
-  z-index: 1;
-
-  @include media(">=desktop") {
-    padding: 0;
-  }
-
-  &:before {
-    position: absolute;
-    top: 13.5%;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 162.3rem;
-    z-index: 5;
-    background-image: url("../images/main-bg.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @include media(">=desktop") {
-      display: none;
-    }
-  }
-
-  .main-title {
-    margin-bottom: 10rem;
+    padding: 0 0 20rem;
     position: relative;
-    z-index: 5;
-    text-align: center;
-
-    @include media(">=desktop") {
-      text-align: left;
-      margin-bottom: 4rem;
-    }
-  }
-
-  .container {
-    @include media(">=desktop") {
-      position: absolute;
-      z-index: 4;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 51%;
-    }
-  }
-
-  .btn {
-    margin: 0 auto;
-    position: relative;
-    z-index: 6;
-
-    @include media(">=desktop") {
-      margin: 0;
-    }
-  }
-
-  .scene-img,
-  .castle-img,
-  .sky-img {
-    width: 100%;
-    transform: scale(1.1);
-    transition: all 0.1s ease;
-  }
-
-  .roman-img {
-    transform: scale(1);
-    transition: all 0.1s ease;
-  }
-
-  .img {
-    display: block;
-    width: 100%;
-    // height: 100%;
-  }
-
-  .sky-img {
-    position: relative;
-    height: 60rem;
     z-index: 1;
 
-    img {
-      width: 100%;
-      height: 60rem;
-
-      @include media(">=desktop") {
-        height: 88.5rem;
-      }
+    @include media('>=desktop') {
+        padding: 0;
     }
 
-    @include media(">=desktop") {
-      height: 88.5rem;
-    }
-  }
+    &:before {
+        position: absolute;
+        top: 13.5%;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 162.3rem;
+        z-index: 5;
+        background-image: url('../images/main-bg.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 
-  .castle-img {
-    margin-top: -62%;
-    position: relative;
-    z-index: 2;
-    height: 31.6rem;
-
-    @include media(">=desktop") {
-      margin-top: -39.5%;
-      height: 118.1rem;
-    }
-
-    img {
-      width: 100%;
-      height: 31.6rem;
-
-      @include media(">=desktop") {
-        height: 118.1rem;
-      }
-    }
-  }
-
-  .scene-img {
-    margin-top: -20%;
-    position: relative;
-    z-index: 3;
-    height: 31.6rem;
-    margin-bottom: 6rem;
-
-    @include media(">=desktop") {
-      margin-top: -23.5%;
-      height: 62.8rem;
+        @include media('>=desktop') {
+            display: none;
+        }
     }
 
-    img {
-      width: 100%;
-      height: 31.6rem;
+    .main-title {
+        margin-bottom: 10rem;
+        position: relative;
+        z-index: 5;
+        text-align: center;
 
-      @include media(">=desktop") {
-        height: 62.8rem;
-      }
+        @include media('>=desktop') {
+            text-align: left;
+            margin-bottom: 4rem;
+        }
     }
-  }
 
-  .roman-img {
-    position: absolute;
-    bottom: -3rem;
-    right: 11.5rem;
-    width: 19.6rem;
-    height: 51.8rem;
-    z-index: 4;
-    transform: scale(1);
-
-    @include media(">=desktop") {
-      height: 104.9rem;
-      width: 39.7rem;
-      right: 58rem;
-      bottom: -5.5rem;
+    .main-section_container {
+        @include media('>=desktop') {
+            position: absolute;
+            z-index: 4;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 51%;
+        }
     }
-    img {
-      width: 100%;
-      height: 51.8rem;
 
-      @include media(">=desktop") {
-        height: 104.9rem;
-      }
+    .btn {
+        margin: 0 auto;
+        position: relative;
+        z-index: 6;
+
+        @include media('>=desktop') {
+            margin: 0;
+        }
     }
-  }
 
-  .shadow {
-    width: 100%;
-    height: 50rem;
-    position: relative;
-    z-index: 4;
-    margin: -44rem 0 -16rem;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
-
-    @include media(">=desktop") {
-      height: 70rem;
-      margin: -65rem 0 0;
+    .scene-img,
+    .castle-img,
+    .sky-img {
+        width: 100%;
+        transform: scale(1.1);
+        transition: all 0.1s ease;
     }
-  }
+
+    .roman-img {
+        transform: scale(1);
+        transition: all 0.1s ease;
+    }
+
+    .img {
+        display: block;
+        width: 100%;
+        // height: 100%;
+    }
+
+    .sky-img {
+        position: relative;
+        height: 60rem;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 60rem;
+
+            @include media('>=desktop') {
+                height: 88.5rem;
+            }
+        }
+
+        @include media('>=desktop') {
+            height: 88.5rem;
+        }
+    }
+
+    .castle-img {
+        margin-top: -62%;
+        position: relative;
+        z-index: 2;
+        height: 31.6rem;
+
+        @include media('>=desktop') {
+            margin-top: -39.5%;
+            height: 118.1rem;
+        }
+
+        img {
+            width: 100%;
+            height: 31.6rem;
+
+            @include media('>=desktop') {
+                height: 118.1rem;
+            }
+        }
+    }
+
+    .scene-img {
+        margin-top: -20%;
+        position: relative;
+        z-index: 3;
+        height: 31.6rem;
+        margin-bottom: 6rem;
+
+        @include media('>=desktop') {
+            margin-top: -23.5%;
+            height: 62.8rem;
+        }
+
+        img {
+            width: 100%;
+            height: 31.6rem;
+
+            @include media('>=desktop') {
+                height: 62.8rem;
+            }
+        }
+    }
+
+    .roman-img {
+        position: absolute;
+        bottom: -3rem;
+        right: 11.5rem;
+        width: 19.6rem;
+        height: 51.8rem;
+        z-index: 4;
+        transform: scale(1);
+
+        @include media('>=desktop') {
+            height: 104.9rem;
+            width: 39.7rem;
+            right: 58rem;
+            bottom: -5.5rem;
+        }
+        img {
+            width: 100%;
+            height: 51.8rem;
+
+            @include media('>=desktop') {
+                height: 104.9rem;
+            }
+        }
+    }
+
+    .shadow {
+        width: 100%;
+        height: 50rem;
+        position: relative;
+        z-index: 4;
+        margin: -44rem 0 -16rem;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
+
+        @include media('>=desktop') {
+            height: 70rem;
+            margin: -65rem 0 0;
+        }
+    }
+
+    .mint-countdown_container {
+        position: relative;
+        z-index: 6;
+
+        .mint-countdown_block {
+            position: absolute;
+            top: 30px;
+
+            h4 {
+                text-transform: uppercase;
+                color: #f6e3b9;
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .mint-countdown_timer {
+                width: 192px;
+                height: 70px;
+                position: relative;
+                display: block;
+
+                &:before,
+                &:after {
+                    width: 200px;
+                    height: 103px;
+                    top: -10px;
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                &:before {
+                    opacity: 1;
+                    background-image: url('../images/mint_counter_bg_default.webp');
+                    z-index: 1;
+                }
+
+                &.link:after {
+                    opacity: 0;
+                    background-image: url('../images/mint_counter_bg_hover.webp');
+                    z-index: 2;
+                    transition: 0.1s opacity linear;
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                .mint-countdown_timer-body {
+                    position: relative;
+                    z-index: 4;
+                    font-size: 4.5rem;
+                    color: #fff;
+                    padding-top: 1px;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                    .cell {
+                        text-align: center;
+                        padding: 0 2px;
+
+                        .sub {
+                            display: block;
+                            color: #c89660;
+                            font-size: 1.8rem;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media('>=tablet') {
+            .mint-countdown_block {
+                top: 100px;
+
+                .mint-countdown_timer {
+                    width: 357px;
+                    height: 126px;
+
+                    &:before,
+                    &:after {
+                        width: 374px;
+                        height: 192px;
+                        top: -17px;
+                    }
+
+                    .mint-countdown_timer-body {
+                        font-size: 4.4rem;
+
+                        .cell {
+                            padding: 0 4px;
+
+                            .sub {
+                                font-size: 1.6rem;
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media('>=desktop') {
+            .mint-countdown_block {
+                top: 100px;
+
+                h4 {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+
+        @include media('>=widescreen') {
+            .mint-countdown_block {
+                top: 110px;
+
+                h4 {
+                    font-size: 2.6rem;
+                }
+
+                .mint-countdown_timer {
+                    width: 240px;
+                    height: 87px;
+
+                    &:before,
+                    &:after {
+                        width: 250px;
+                        height: 129px;
+                        top: -11px;
+                    }
+
+                    .mint-countdown_timer-body {
+                        font-size: 5.2rem;
+
+                        .cell .sub {
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media('>=widescreen-md') {
+            .mint-countdown_block {
+                top: 160px;
+
+                .mint-countdown_timer {
+                    width: 287px;
+                    height: 103px;
+
+                    &:before,
+                    &:after {
+                        width: 300px;
+                        height: 154px;
+                        top: -13px;
+                    }
+                }
+            }
+        }
+
+        @include media('>=full-hd') {
+            .mint-countdown_block {
+                top: 300px;
+
+                h4 {
+                    font-size: 2rem;
+                }
+
+                .mint-countdown_timer {
+                    width: 357px;
+                    height: 126px;
+
+                    &:before,
+                    &:after {
+                        width: 374px;
+                        height: 192px;
+                        top: -17px;
+                    }
+
+                    .mint-countdown_timer-body {
+                        font-size: 4.8rem;
+
+                        .cell .sub {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
