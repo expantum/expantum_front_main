@@ -17,7 +17,7 @@ function init() {
     const SECONDS_CELL = TIMER_BODY.querySelector('.cell.seconds .val');
 
     Countdown.timer(
-        dayjs.utc('2022-01-26T18:00:00.000Z').local().toDate(),
+        dayjs.utc('2022-01-26T16:00:00.000Z').local().toDate(),
         function (timeLeft) {
             DAYS_CELL.innerHTML = convert(timeLeft.days);
             HOURS_CELL.innerHTML = convert(timeLeft.hours);
