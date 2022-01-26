@@ -4,6 +4,7 @@ import scrollTo from './components/scroll-to';
 import initPopup from './components/popup';
 import sendForm from './components/send-form';
 import initMintCountdown from './components/mint-countdown';
+import mintModalScript from './mint';
 
 const resizeHandler = () => {
     const htmlWidth = document.documentElement.clientWidth;
@@ -31,6 +32,9 @@ function parallax(event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.current-year').forEach((node) => (node.innerHTML = currentYear));
+
     // eslint-disable-next-line no-undef
     AOS.init({
         duration: 1000,
@@ -42,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPopup();
     sendForm.init();
     initMintCountdown();
+    mintModalScript();
 
     // eslint-disable-next-line no-undef, no-new
     new Plyr('#player');

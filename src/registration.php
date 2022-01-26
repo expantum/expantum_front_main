@@ -1,5 +1,8 @@
 <?php
 
+echo "Pre-registration ended.";
+die();
+
 const DB_PATH = __DIR__.'/../../registrations.db';
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json; charset=utf-8');
